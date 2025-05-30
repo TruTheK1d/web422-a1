@@ -3,11 +3,9 @@ const siteSchema = require("./siteSchema");
 
 module.exports = class SitesDB {
   constructor() {
-    // We don't have a `Site` object until initialize() is complete
     this.Site = null;
   }
 
-  // Pass the connection string to `initialize()`
   initialize(connectionString) {
     return new Promise((resolve, reject) => {
       const db = mongoose.createConnection(connectionString);
@@ -16,7 +14,7 @@ module.exports = class SitesDB {
         reject(err);
       });
       db.once('open', () => {
-        console.log("✅ MongoDB connection successful!");
+        console.log("MongoDB connection successful!");
         this.Site = db.model("site", siteSchema);
         resolve();
       });
@@ -50,7 +48,6 @@ module.exports = class SitesDB {
 
   getSiteById(id) {
     return this.Site.findById(id).exec();
-    // return this.Site.findOne({ _id: id }).exec(); // both work
   }
 
   updateSiteById(data, id) {

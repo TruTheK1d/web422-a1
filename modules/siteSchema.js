@@ -20,7 +20,7 @@ const provinceOrTerritorySchema = new mongoose.Schema({
 });
 
 const siteSchema = new mongoose.Schema({
-  // _id: String, // Don't use this for the automatically generated _id ie. PK Objectid('.....') !!!
+  // _id: String, 
   siteName: String,
   description: String,
   dates: [dateSchema], // [{ year: String, type: String }],

@@ -1,3 +1,17 @@
+/********************************************************************************
+*  WEB422 – Assignment 1
+* 
+*  I declare that this assignment is my own work in accordance with Seneca's
+*  Academic Integrity Policy:
+* 
+*  https://www.senecapolytechnic.ca/about/policies/academic-integrity-policy.html
+* 
+*  Name: Turmunkh Davaajargal Student ID: 164138232 Date: may 16, 2025
+*
+*  Published URL on Vercel:  
+*
+********************************************************************************/
+
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
